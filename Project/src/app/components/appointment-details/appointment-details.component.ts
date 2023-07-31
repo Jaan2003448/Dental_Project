@@ -1,8 +1,6 @@
 import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 import { Appointment } from 'src/app/models/appointment.model';
 import { AppointmentService } from 'src/app/services/appointment.service';
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore';
 
 @Component({
   selector: 'app-appointment-details',
@@ -30,7 +28,8 @@ export class AppointmentDetailsComponent implements OnInit, OnChanges {
     const data = {
       email: this.currentAppointment.email,
       phoneNumber: this.currentAppointment.phoneNumber,
-      date: this.currentAppointment.date
+      date: this.currentAppointment.date,
+      time: this.currentAppointment.time
     };
 
     if (this.currentAppointment.id) {

@@ -31,6 +31,18 @@
           name="date"
         />
       </div>
+
+      <div class="form-group">
+        <label for="time">Time</label>
+        <input
+          type="text"
+          class="form-control"
+          id="time"
+          [(ngModel)]="currentAppointment.time"
+          name="time"
+        />
+      </div>
+
     </form>
   
     <button class="badge badge-danger mr-2" (click)="deleteAppointment()">

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <div>
+
+            <nav class="navbar navbar-expand navbar-dark bg-dark">
+          
+              <a href="#" class="navbar-brand">Smile Dental Services</a>
+          
+              <div class="navbar-nav mr-auto">
+          
+                <li class="nav-item">
+          
+                  <a routerLink="appointments" class="nav-link">Appointments</a>
+          
+                </li>
+          
+                <li class="nav-item">
+          
+                  <a routerLink="add" class="nav-link">Add</a>
+          
+                </li>
+          
+                </div>
+                </nav>
+
+           
+          
+            <div class="container mt-3">
+          
+              <h2>{{ "Smile Dental Services" }}</h2>
+          
+              <router-outlet></router-outlet>
+          
+            </div>
+          
+          </div>
+    </head>
+
+    <body>
+        <img src="/assets/background.jpeg">
+        <h4>Smile!! It Lets your Teeth Breathe</h4>
+
+        <h3>
+            Allow the best dentists in the world to treat your teeth
+        </h3><br>
+
+        <h5>Dr. Jeffery R Shapiro DMD</h5><br><td><img src="/assets/jeffery.jpg" height="300px" width="300px"></td>
+        <p>Specializtion: General Dentist</p><br><br>
+        <h5>Dr. John Tan BDS</h5><br><td><img src="/assets/tan.jpg" height="350px" width="450px"></td>
+        <p>Specializtion: Prosthodontics</p><br><br>
+        <h5>Dr. Ellen Fraser DDS</h5><br><td><img src="/assets/ellen.jpg" height="300px" width="450px"></td>
+        <p>Specializtion: Orthodontics</p>
+    </body>
+</html>

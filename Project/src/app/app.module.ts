@@ -11,13 +11,15 @@ import { AddAppointmentComponent } from './components/add-appointment/add-appoin
 import { AppointmentDetailsComponent } from './components/appointment-details/appointment-details.component';
 import { AppointmentsListComponent } from './components/appointments-list/appointments-list.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddAppointmentComponent,
     AppointmentDetailsComponent,
-    AppointmentsListComponent
+    AppointmentsListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

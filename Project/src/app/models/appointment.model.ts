@@ -4,6 +4,6 @@ export class Appointment {
     email?: string;
     phoneNumber?: string;
     date?: string;
-
+    time?: string;
   };
   
