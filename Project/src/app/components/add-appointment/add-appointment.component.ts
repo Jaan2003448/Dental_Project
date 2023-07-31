@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Appointment } from 'src/app/models/appointment.model';
 import { AppointmentService } from 'src/app/services/appointment.service';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 @Component({
   selector: 'app-add-appointment',
@@ -15,13 +17,21 @@ export class AddAppointmentComponent {
   constructor(private appointmentService: AppointmentService) { }
 
   ngOnInit(): void { }
+  
 
   saveAppointment(): void {
+
     this.appointmentService.create(this.appointment).then(() => {
-      console.log('Created new appointment successfully!');
+
+      console.log('Created new item successfully!');
+
       this.submitted = true;
+
     });
+
   }
+
+  
 
   newAppointment(): void {
     this.submitted = false;

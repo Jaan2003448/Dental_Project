@@ -1,13 +1,9 @@
 export class Appointment {
-
-    id?: any;
-
+    id?:any;
     name?: string;
-  
     email?: string;
-  
     phoneNumber?: string;
+    date?: string;
+
+  };
   
-    date?: Date;
-  
-  }

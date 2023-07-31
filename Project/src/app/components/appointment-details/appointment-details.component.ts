@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 import { Appointment } from 'src/app/models/appointment.model';
 import { AppointmentService } from 'src/app/services/appointment.service';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 @Component({
   selector: 'app-appointment-details',
@@ -10,12 +12,7 @@ import { AppointmentService } from 'src/app/services/appointment.service';
 export class AppointmentDetailsComponent implements OnInit, OnChanges {
   @Input() appointment?: Appointment;
   @Output() refreshList: EventEmitter<any> = new EventEmitter();
-  currentAppointment: Appointment = {
-    name: '',
-    email: '',
-    phoneNumber: '',
-    date: new Date()
-  };
+  currentAppointment: Appointment = {};
   message = '';
 
   constructor(private appointmentService: AppointmentService) { }

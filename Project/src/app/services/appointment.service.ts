@@ -8,31 +8,26 @@ import { Appointment } from '../models/appointment.model';
   providedIn: 'root'
 })
 export class AppointmentService {
-  private appointmentsCollection: AngularFirestoreCollection<Appointment>;
+  private dbPath = "/appointments";
+  private appointmentsref: AngularFirestoreCollection<Appointment>;
 
-  constructor(private firestore: AngularFirestore) {
-    this.appointmentsCollection = this.firestore.collection<Appointment>('appointments');
+  constructor(private db: AngularFirestore) {
+    this.appointmentsref = this.db.collection(this.dbPath);
   }
 
-  getAll(): Observable<Appointment[]> {
-    return this.appointmentsCollection.valueChanges();
+  getAll(): AngularFirestoreCollection<Appointment>{
+    return this.appointmentsref;
   }
 
-  get(id: string): Observable<Appointment | undefined> {
-    return this.appointmentsCollection.doc<Appointment>(id).valueChanges();
-  }
-
-  create(appointment: Appointment): Promise<void> {
-    return this.appointmentsCollection.add(appointment).then(ref => {
-      console.log('Added document with ID: ', ref.id);
-    });
+  create(appointment: any){
+    return this.appointmentsref.add({ ...appointment });
   }
 
   update(id: string, data: any): Promise<void> {
-    return this.appointmentsCollection.doc(id).update(data);
+    return this.appointmentsref.doc(id).update(data);
   }
 
   delete(id: string): Promise<void> {
-    return this.appointmentsCollection.doc(id).delete();
+    return this.appointmentsref.doc(id).delete();
   }
 }

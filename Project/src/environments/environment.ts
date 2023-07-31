@@ -1,12 +1,12 @@
 export const environment = {
     production: false,
     firebase: {
-      apiKey: 'AIzaSyCn89kMi-JaEt4kM0pYYaC1dSsePes_wyg',
-      authDomain: 'dental-project-9a429.firebaseapp.com',
-      databaseURL: 'https://dental-project-9a429.firebaseio.com',
-      projectId: 'dental-project-9a429',
-      storageBucket: 'dental-project-9a429.appspot.com',
-      messagingSenderId: '816585289355',
-      appId: '1:816585289355:web:8bccccd18067792ae86e8e'
+      apiKey: 'AIzaSyDw8xJHRNl7CRoLiesDpZ3Sd92I4oSpdYQ',
+      authDomain: 'dental-project-1a5c5.firebaseapp.com',
+      databaseURL: 'https://dental-project-1a5c5.firebaseio.com',
+      projectId: 'dental-project-1a5c5',
+      storageBucket: 'dental-project-1a5c5.appspot.com',
+      messagingSenderId: '90788098678',
+      appId: '1:90788098678:web:5b0d66a96917a6ce4e6557'
     }
   };
