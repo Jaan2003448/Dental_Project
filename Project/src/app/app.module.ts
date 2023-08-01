@@ -12,6 +12,8 @@ import { AppointmentDetailsComponent } from './components/appointment-details/ap
 import { AppointmentsListComponent } from './components/appointments-list/appointments-list.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { HomeComponent } from './components/home/home.component';
     AddAppointmentComponent,
     AppointmentDetailsComponent,
     AppointmentsListComponent,
-    HomeComponent
+    HomeComponent,
+    SignInComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

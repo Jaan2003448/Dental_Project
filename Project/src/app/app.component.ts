@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +8,5 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class AppComponent {
 
   title = 'Project';
+
 }
