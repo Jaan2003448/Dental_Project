@@ -20,13 +20,16 @@
           
                 </li>
 
-                <li class="nav-item">
-                  <a routerLink="sign-in" class="nav-link" (click)="authService.SignIn">Sign in</a>
-                </li>
+                <nav *ngIf="isUserSignedIn; else signInLink">
+                  <!-- Display this content when user is signed in -->
+                  <a href="#" (click)="signOut()">Sign Out</a>
+                </nav>
                 
-                <li class="nav-item">
-                  <a routerLink="sign-out" class="nav-link" (click)="authService.SignOut">Sign out</a>
-                </li>
+                <ng-template #signInLink>
+                  <!-- Display this content when user is not signed in -->
+                  <a routerLink="/sign-in">Sign In</a>
+                </ng-template>
+                
 
           
                 </div>

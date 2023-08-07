@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <h1>Welcome to Smile Dental Services</h1>
+        <h4>Sign-up to book an appointment</h4>
+    </header>
+
+    <body>
+        <div class="auth-container">
+            <h2>Sign Up</h2>
+            <form (ngSubmit)="signUp(email.value, password.value)">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" #email required>
+          
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" #password required>
+          
+              <button type="submit">Sign Up</button>
+
+              <div class="RedirectToLogin">
+                <span>Already have an account?<span class="redirect" routerLink="/sign-in">Sign-In</span></span>
+              </div>
+            </form>
+          </div>          
+    </body>
+</html>

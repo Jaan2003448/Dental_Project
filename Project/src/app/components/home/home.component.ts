@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/shared/services/auth.service';
-import { User } from 'src/app/shared/services/user';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +9,19 @@ import { User } from 'src/app/shared/services/user';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  isUserSignedIn = false;
 
+  constructor(private afAuth: AngularFireAuth, private authService: AuthServiceService) {}
 
-
-
-  constructor(public authService: AuthService){
-
+  ngOnInit(): void {
+    this.afAuth.authState.subscribe(user => {
+      this.isUserSignedIn = !!user;
+    });
   }
-ngOnInit(): void {
-}
+
+  signOut() {
+    this.authService.signOut().then(() => {
+      this.isUserSignedIn = false;
+    });
+  }
 }

@@ -12,8 +12,11 @@ import { AppointmentDetailsComponent } from './components/appointment-details/ap
 import { AppointmentsListComponent } from './components/appointments-list/appointments-list.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
-import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
+
 
 @NgModule({
   declarations: [
@@ -22,8 +25,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     AppointmentDetailsComponent,
     AppointmentsListComponent,
     HomeComponent,
-    SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
