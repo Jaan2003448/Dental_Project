@@ -10,7 +10,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
-const routes: Routes = [{ path: '', redirectTo: 'sign-in', pathMatch: 'full' },
+const routes: Routes = [{ path: '', redirectTo: 'home', pathMatch: 'full' },
 
 { path: 'appointments', component: AppointmentsListComponent },
 
